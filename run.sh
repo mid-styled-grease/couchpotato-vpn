@@ -12,4 +12,6 @@ if [ -n "$USERNAME" -a -n "$PASSWORD" ]; then
   set -- "$@" '--auth-user-pass' 'auth.conf'
 fi
 
-openvpn "$@"
+openvpn --daemon "$@"
+
+/init
